@@ -11,8 +11,8 @@ function handleSubmit(e) {
   }
 
   const value = encodeURIComponent(rating.value);
-  console.log(value);
-  window.location.href = `./message.html?rating=${value}`;
+
+  window.location.href = `message.html?rating=${value}`;
 }
 
 form.addEventListener('submit', handleSubmit);
