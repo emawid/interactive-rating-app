@@ -1,0 +1,1 @@
+import"./style-Dl3IWojr.js";const r=document.querySelector(".card__form");function o(t){t.preventDefault();const e=document.querySelector(".card__radio:checked");if(!e){alert("Please select a rating before submitting the survey.");return}const n=encodeURIComponent(e.value);window.location.href=`message.html?rating=${n}`}r.addEventListener("submit",o);
