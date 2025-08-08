@@ -1,0 +1,112 @@
+.wrapper {
+  max-width: 412px;
+  width: 100%;
+  margin-top: 153px;
+  margin-inline: auto;
+  padding: 0 1.5rem;
+}
+
+.card {
+  border-radius: 15px;
+  background: radial-gradient(
+    98.96% 98.96% at 50% 0%,
+    var(--color-gradient-start) 0%,
+    var(--color-gradient-end) 100%
+  );
+  padding: var(--spacing-300);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-300);
+}
+
+.card__icon-wrapper {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: var(--color-grey-900);
+}
+
+.card__content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-200);
+}
+
+.card__headline {
+  margin: 0;
+  color: var(--color-white);
+}
+
+.card__description {
+  margin: 0;
+  color: var(--color-grey-500);
+}
+
+.card__ratings {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
+  padding-left: 0;
+  list-style: none;
+}
+
+/* Hide radio buttons */
+.card__radio {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* Style the rating spans as buttons */
+.card__rating {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  background-color: var(--color-grey-900);
+  color: var(--color-grey-500);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 700;
+}
+
+/* Hover state */
+.card__rating:hover {
+  background-color: var(--color-white);
+  color: var(--color-grey-900);
+}
+
+/* Selected state - when radio is checked */
+.card__radio:checked + .card__rating {
+  background-color: var(--color-orange-500);
+  color: var(--color-grey-900);
+}
+
+/* Focus state for accessibility */
+.card__radio:focus-visible + .card__rating {
+  outline: 2px solid var(--color-orange-500);
+  outline-offset: 2px;
+}
+
+.card__button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--color-orange-500);
+  color: var(--grey-950);
+  padding: 13.5px 0;
+  border-radius: 1.4rem;
+  cursor: pointer;
+}
+
+.card__button:active,
+.card__button:hover {
+  background-color: var(--color-white);
+}
